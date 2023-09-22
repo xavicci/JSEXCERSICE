@@ -1,14 +1,21 @@
+CURSO GIT
 Comandos básicos de git
 
 git init: inicializa un repositorio de GIT en la carpeta donde se ejecute el comando.
 git add: añade los archivos especificados al área de preparación (staging).
 git commit -m “commit description”: confirma los archivos que se encuentran en el área de preparación y los agrega al repositorio.
 git commit -am “commit description”: añade al staging area y hace un commit mediante un solo comando. (No funciona con archivos nuevos)
-git status: ofrece una descripción del estado de los archivos (untracked, ready to commit, nothing to commit).
+git status: ofrece una descripción del estado de los archivos (untracked, ready to commit, nothing to commit)!
 git rm (. -r, filename) (–cached): remueve los archivos del index.
+git rm --cached nombre_del_archivo.txt: para eliminar el archivo del staged(ram)
 git config --global user.email tu@email.com: configura un email.
 git config --global user.name : configura un nombre.
 git config --list: lista las configuraciones.
+Si por algún motivo te equivocaste en el nombre o email que configuraste al principio, lo puedes modificar de la siguiente manera:
+git config --global --replace-all user.name “Aquí va tu nombre modificado”
+O si lo deseas eliminar y añadir uno nuevo
+git config --global --unset-all user.name :Elimina el nombre del usuario
+
 
 Analizar cambios en los archivos de un proyecto Git
 git log: lista de manera descendente los commits realizados.
