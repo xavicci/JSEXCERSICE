@@ -1,0 +1,5 @@
+es un espacio en memoria ram temporal donde se van cargando nuestros cambios mediante el add y commit
+
+git add
+git rm
+git commit
