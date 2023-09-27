@@ -1,0 +1,8 @@
+Merge
+Hacer una rama secuandaria y luego unirla a la rama principal
+
+git status :: para ver los archivos trackeados y sin trackear
+git diff   :: para ver la diferencia de los archivos trackeados y sin trackear
+
+
+

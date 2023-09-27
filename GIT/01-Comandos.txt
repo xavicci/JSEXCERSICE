@@ -53,3 +53,7 @@ git branch : crea una nueva rama.
 git checkout : se mueve a la rama especificada.
 git merge : fusiona la rama actual con la rama especificada y produce un nuevo commit de esta fusión.
 git branch: lista las ramas generadas.
+
+git reset 0b9a76c134da34d304b9016441cb30865dce468b
+git reset 0b9a76c134da34d304b9016441cb30865dce468b --hard   (vuelves al pasado de manera que borra todos los archivos y no puedes recuperar)
+git reset 0b9a76c134da34d304b9016441cb30865dce468b --soft  (quiere decir q lo q estaba en staging va permanecer allí)
