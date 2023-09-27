@@ -6,3 +6,12 @@ git diff   :: para ver la diferencia de los archivos trackeados y sin trackear
 
 
 
+git reset 0b9a76c134da34d304b9016441cb30865dce468b
+git reset 0b9a76c134da34d304b9016441cb30865dce468b --hard   (vuelves al pasado de manera que borra TODOS los archivos y no puedes recuperar)
+git reset 0b9a76c134da34d304b9016441cb30865dce468b --soft  (quiere decir q lo q estaba en staging va permanecer allí y el resto TODO BORRA)
+
+
+$ git log --stat
+$ git checkout 0b9a76c134da34d304b9016441cb30865dce468b GIT/01-Comandos.txt  :: recuperas un arhivo que hayas realizado commit antes.
+$ git checkout main GIT/01-Comandos.txt  :: recuperas el archivo que previamente hiciste checkout 0b9a76c134da34d304b9016441cb30865dce468b
+
