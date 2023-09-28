@@ -1,0 +1,2 @@
+git commit -a :: hago commit solo de los archivos trackeados y dispara una ventana para escribir mi mensaje
+git log --stat
