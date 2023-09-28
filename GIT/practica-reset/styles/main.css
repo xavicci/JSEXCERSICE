@@ -3,6 +3,12 @@ body {
     color: brown;
 }
 
+h1 {
+    color: tomato;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+}
+
 h2 {
     color: blue;
 }
