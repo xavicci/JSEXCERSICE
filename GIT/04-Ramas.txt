@@ -1,2 +1,4 @@
 git commit -a :: hago commit solo de los archivos trackeados y dispara una ventana para escribir mi mensaje
 git log --stat
+git branch nombre_rama :: creo una rama
+git checkout nombre_rama :: me muevo a esa rama
