@@ -1,0 +1,17 @@
+{
+  "name": "curso-async",
+  "version": "1.0.0",
+  "description": "cd /c/codevs/JSEXCERSICE/js/ASYNC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "asynawait",
+    "promises",
+    "callbacks"
+  ],
+  "author": "XavierFlores",
+  "license": "MIT"
+}
