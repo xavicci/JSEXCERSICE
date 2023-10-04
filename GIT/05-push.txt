@@ -1,0 +1,2 @@
+git remote - v :: lista todos los repositorios remotos.git
+git push origin learn_git
