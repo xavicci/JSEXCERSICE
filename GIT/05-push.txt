@@ -1,2 +1,16 @@
 git remote - v :: lista todos los repositorios remotos.git
 git push origin learn_git
+
+ git log --all --graph --decorate --oneline :: muestra todo el historial de commits de manera un poco mas grafica
+
+
+Para crear un tags
+
+git tag -a v0.1 -m "Resultado de la primera version del curso" [HASH] :: 1199f5a
+git show-ref --tags
+
+
+git pull origin --tags 
+
+git tag -d dormido                 :: borramos de nuestro repo local
+git push origin :refs/tags/dormido :: borramos de manera forzada un tag en git hub
