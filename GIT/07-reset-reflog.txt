@@ -1,0 +1,7 @@
+git brand -D [rama]  :: borro una rama
+git log --oneline :: log de todos los commits
+
+
+Git reflog                  :: se ve absolutamente todos los cambios. (como el hash y el head)
+git reset --soft            :: mantiene lo que esta en staging
+git reset --hard [commit]   :: resetea todo absolutamente todos.
