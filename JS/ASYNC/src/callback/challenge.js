@@ -2,18 +2,18 @@ const XMLHttpRequest = require('xmlhttprequest');
 const API = 'https://api.escuelajs.co/api/v1';
 
 function fetchData(urlApi, callback) {
-    let xttp = new XMLHttpRequest();
+    let xhttp = new XMLHttpRequest();
 
-    xttp.open('GET', urlApi, true);
-    xttp.onreadystatechange = function (event) {
-        if (xttp.readyState === 4) {
-            if (xttp.status === 200) {
-                callback(null, JSON.parse(xttp.responseText));
+    xhttp.open('GET', urlApi, true);
+    xhttp.onreadystatechange = function (event) {
+        if (xhttp.readyState === 4) {
+            if (xhttp.status === 200) {
+                callback(null, JSON.parse(xhttp.responseText));
             }
         } else {
             const error = new Error('Error' + urlApi);
             return callback(error, null);
         }
     }
-    xttp.send();
+    xhttp.send();
 }
