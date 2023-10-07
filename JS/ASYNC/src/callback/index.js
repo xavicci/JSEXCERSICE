@@ -17,6 +17,11 @@ function gretting(name) {
     console.log(`Hola ${name}`)
 }
 
-setTimeout(() => console.log('Hola JavaScript'), 0);
+setTimeout(gretting, 2000, 'Xavi');
+
+
+
+
+
 
 console.log(calc(5, 4, sum));
