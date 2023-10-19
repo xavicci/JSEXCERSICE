@@ -20,3 +20,29 @@ Se recomienda convertirlos en Array mediante la siguiente asignacion: [...nodeli
 -> parentElement.append
 -> parentElement.insertBefore
 -> parentElement.insertAdjacentElement
+
+### Eliminar 
+-> parentElement.removeChild
+    ** padre.removeChild(nodoEliminar);
+    ** nodoEliminar.parentElement; (me dara el padre directo de ese nodo)
+-> document.remove
+    ** nodoEliminar.remove(); es una version mejorada de removeChild
+-> document.replaceChild
+    ** padre.replaceChild(node, toReplace);
+
+## CARGAS DE TRABAJO
+
+
+for (let i=0; i<100; i++){
+    const node = document.createElement('input');
+    document.body.appendChild(node);
+}
+*************************************************
+const nodos =[];
+
+for (let i=0; i<100; i++){
+    const node = document.createElement('input');
+    nodos.push(node);
+}
+
+document.body.append(...nodos)
