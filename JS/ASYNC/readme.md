@@ -1,8 +1,9 @@
-cd /c/codevs/JSEXCERSICE/js/ASYNC
+cd /c/codevs/JSEXCERSICE/js/ASYNC               job
+cd /c/Users/Xavi/Desktop/JSEXCERSICE/JS/ASYNC   lap
 
 Que es el asincronismo?
 
-Javascipt es sincrono y bloqueante en un solo hilo, ademas que produce un loop de eventos.
+Javascipt es sincrono y bloqueante en un solo hilo (Thread), ademas que produce un loop de eventos.
 
 Que es sincrono?
 Las tareas que se ejecutan de forma secuencial, se debe esperar a que se complete para continuar la siguiente.
@@ -32,6 +33,9 @@ Los objetos son asignados a un monticulo (espacio grande en memoria no organizad
 Call stack (pila)
 Apila de forma organizada las instrucciones de nuestro programa.
     LIFO: Last in First Out
+
+Call back queue
+Bandeja de espera de call stack gracias al event loop.
 
 Task queue
 Cola de tareas, se maneja la concurrencia, se agregan las tareas que ya estan listas para pasar al stack

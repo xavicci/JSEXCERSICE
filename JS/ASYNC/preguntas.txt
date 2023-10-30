@@ -1,0 +1,5 @@
+cuando usa callback , promises y asyn await
+
+
+ver
+https://platzi.com/clases/1642-javascript-profesional/22169-event-loop/
