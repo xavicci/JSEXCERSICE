@@ -26,3 +26,17 @@ La complejidad temporal trata de medir la eficiencia de un algoritmo conforme la
 🌌 En Complejidad Espacial es diferente. Cada compilador asigna un espacio distinto de memoria para almacenar números o palabras.
 
 📦 La diversidad de tamaños y formas con las que el compilador almacena información es interesante, pero para el propósito que tenemos, podemos simplificarlo a contar cuántas variables se definen para almacenar arreglos, números o cadenas.
+
+Otras complejidades existentes
+Accesos a memoria.
+Procesos paralelos.
+Comparaciones.
+Entre otras más.
+
+que bonitas son las matematicas, cualquier algoritmo que creemos podra ser “evaluado” en este caso en funcion del tiempo, lo que nos lleva a poder representarlo graficamente.
+Ahora este grafico podemos hacerlo “parecer lo mas aproximado” a una de las tantas funciones trigonometricas que existen es decir que tienda a cero la distancia de una a otra (esto se llama asintota) , pero la pregunta es hasta que punto podemos compararlas?
+pues bueno, por eso hablamos de un limite para poder decirle; mira funcion yo te evaluo hasta este punto porque hasta este punto tienes este comportamiento.
+Ahora con dicho “comportamiento limitante de la funcion” te haré mis analisis… en otras palabras analisis asintótico.
+
+
+https://github.com/360macky/complejidad-algoritmica-js/tree/master/algorithms
