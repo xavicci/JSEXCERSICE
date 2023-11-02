@@ -1,5 +1,11 @@
+const api = axios.create({
+    baseURL: 'https://api.thecatapi.com/v1'
+});
+api.defaults.headers.common['X-API-KEY'] = 'live_qd4zwtzwqw8BxJi9PSpIB31mnA3M63638gNbOm71P5MlRkoUUSLrwMcw7cJymcjV';
+
 const URL = 'https://api.thecatapi.com/v1/images/search?limit=2&api_key=live_qd4zwtzwqw8BxJi9PSpIB31mnA3M63638gNbOm71P5MlRkoUUSLrwMcw7cJymcjV';
 const API_URL_FAVOURITES = 'https://api.thecatapi.com/v1/favourites?api_key=live_qd4zwtzwqw8BxJi9PSpIB31mnA3M63638gNbOm71P5MlRkoUUSLrwMcw7cJymcjV';
+const API_URL_UPLOAD = 'https://api.thecatapi.com/v1/images/upload';
 const API_URL_FAVOURITES_DELETE = (id) => `https://api.thecatapi.com/v1/favourites/${id}?api_key=live_qd4zwtzwqw8BxJi9PSpIB31mnA3M63638gNbOm71P5MlRkoUUSLrwMcw7cJymcjV`;
 
 // fetch(URL)
@@ -83,20 +89,25 @@ const loadFavoritesMichis = async () => {
 }
 
 async function saveFavouriteMichi(id) {
-    const rest = await fetch(API_URL_FAVOURITES, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            image_id: id
-        }),
-    });
-    console.log('Save');
-    console.log(rest);
+    // const rest = await fetch(API_URL_FAVOURITES, {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //         image_id: id
+    //     }),
+    // });
 
-    if (rest.status !== 200) {
-        spanError.innerHTML = "Hubo un error: " + rest.status;
+    const { data, status } = await api.post('/favourites', {
+        image_id: id,
+    });
+
+    console.log('Save');
+    console.log(data);
+
+    if (status !== 200) {
+        spanError.innerHTML = "Hubo un error: " + status;
     } else {
         console.log('Michi guardado en favoritos')
         loadFavoritesMichis();
@@ -118,7 +129,31 @@ async function deleteFavouriteMichi(id) {
     }
 
 }
+async function uploadMichiPhoto() {
+    const form = document.getElementById('uploadingForm');
+    const formData = new FormData(form);
 
+    const res = await fetch(API_URL_UPLOAD, {
+        method: 'POST',
+        headers: {
+            'X-API-KEY': 'live_qd4zwtzwqw8BxJi9PSpIB31mnA3M63638gNbOm71P5MlRkoUUSLrwMcw7cJymcjV'
+            // 'Content-Type': 'multipart/form-data'
+        },
+        body: formData,
+    })
+
+    const data = await res.json();
+
+    if (res.status !== 201) {
+        spanError.innerHTML = `Hubo un error al subir michi: ${res.status} ${data.message}`
+    }
+    else {
+        console.log("Foto de michi cargada :)");
+        console.log({ data });
+        console.log(data.url);
+        saveFavouriteMichi(data.id) //para agregar el michi cargado a favoritos.
+    }
+}
 loadFavoritesMichis();
 loadRandomMichis();
 
