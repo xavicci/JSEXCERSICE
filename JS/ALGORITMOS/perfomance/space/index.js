@@ -9,3 +9,5 @@ contar(50);
 contar(50);
 contar(5000);
 contar(500);
+contar(500);
+contar(500);
