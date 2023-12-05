@@ -1,12 +1,14 @@
 /* Las listas enlazadas sencillas tienen una serie de ventajas sobre otras estructuras de datos, como las matrices:
-
+https://visualgo.net/en/list
 Inserción y eliminación eficientes: Las listas enlazadas permiten insertar y eliminar nodos en cualquier posición de la lista en tiempo constante. Esto se debe a que no es necesario desplazar los elementos restantes de la lista para acomodar el nuevo o elemento eliminado.
 Tamaño dinámico: Las listas enlazadas no tienen un tamaño fijo, por lo que pueden crecer y decrecer dinámicamente según sea necesario. Esto las hace adecuadas para aplicaciones en las que el tamaño de la lista puede ser desconocido o variable.
 Flexibilidad: Las listas enlazadas se pueden utilizar para implementar una variedad de otras estructuras de datos, como pilas, colas y grafos. */
 
 // 1 --> 2 --> 3 --> 4 --> 5 --> null
 
-// let singlyLinkedLis = {
+// Metodos: prepend, append, lookup, insert, delete
+
+// let singlyLinkedList = {
 //   head: {
 //     value: 1,
 //     next: {
@@ -33,10 +35,7 @@ class Node {
 class MySinglyLinkedList {
     constructor(value) {
         // creamos el inicio de nuestro SinglyLinkedList
-        this.head = {
-            value,
-            next: null,
-        };
+        this.head = { value, next: null, };
 
         // Aqui sucede la magia ✨
         // Todo lo que modifiquemos en los atributos de tail
