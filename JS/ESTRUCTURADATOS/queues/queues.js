@@ -11,6 +11,7 @@ class Node {
         this.value = value;
         // this.value = value;
         this.next = null;
+        // this.next = null;
     }
 }
 
